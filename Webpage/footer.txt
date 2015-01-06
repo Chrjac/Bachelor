@@ -1,0 +1,13 @@
+	<!-->
+		<div id="footer">
+		Gruppe Bo15-g02
+		</div>
+		#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+		
+		</!-->

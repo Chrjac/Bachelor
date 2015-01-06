@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Gruppe Bo15-g02</h1>
+		</div>
+
+		<div id="navtop">
+		<br>
+		<ul id="navlist">
+		<li id="active"><a href="#" id="current">Hjem</a></li>
+		<li><a href="/omoss.html">Om oss</a></li>
+		<li><a href="#">Arbeidsgiver</a></li>
+		<li><a href="#">Prosjektet</a></li>
+		</ul>
+		</div>
+		
+		<div id="nav">
+			<br>
+			London<br>
+			Paris<br>
+			Tokyo<br>
+		</div>
+		
+		<div id="bilde">
+		</div>
+		
+
+		<div id="section">
+			<h1>Ekstra Latte med pepsimax</h1>
+			<p>
+				noe lurt
+			</p>
+			<p>
+				Noe smart
+			</p>
+		</div>
+
+
+		
+		
+	</body>
