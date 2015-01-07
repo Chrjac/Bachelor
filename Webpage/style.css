@@ -52,19 +52,19 @@ text-decoration:underline;
 	margin-left: 180px;
 	}
 
-#omlist a:link{
+#nav a:link{
 color:#330000;
 text-decoration:none;
 font-size:medium; 
 }
 
-#omlist a:visited{
+#nav a:visited{
 color:#330000;
 text-decoration:none:
 font-size:medium;
 }
 
-#omlist a:hover{
+#nav a:hover{
 font-weight:bold;
 }
 
