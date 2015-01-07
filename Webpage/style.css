@@ -24,6 +24,24 @@ margin-left: 220px;
 margin-right: -170px;
 
 }
+#navlist a:link{
+color:#300000;
+text-decoration:none;
+font-size:large;
+font-weight:bold; 
+}
+
+#navlist a:visited{
+color:#300000;
+text-decoration:none;
+font-size:large;
+font-weight:bold; 
+}
+
+#navlist a:hover{
+text-decoration:underline;
+}
+
 #nav {
     line-height:30px;
     height:300px;
@@ -33,6 +51,22 @@ margin-right: -170px;
 	text-align: right;
 	margin-left: 180px;
 	}
+
+#omlist a:link{
+color:#330000;
+text-decoration:none;
+font-size:medium; 
+}
+
+#omlist a:visited{
+color:#330000;
+text-decoration:none:
+font-size:medium;
+}
+
+#omlist a:hover{
+font-weight:bold;
+}
 
 #bilde{
  line-height:30px;
@@ -54,11 +88,12 @@ margin-right: -170px;
 	margin-top: 260px;
 	}
 #section {
-    width:450px;
-	height: 300px;
+    width:400px;
+	min-height: 250px;
     float:left;
 	border: thin black solid;
 	padding-left: 50px;
+	padding-right: 50px;
 	margin-left: 550px;
 	position: absolute;	
 	margin-top: 40px;
