@@ -1,0 +1,12 @@
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\bin\geotagconverter.dll.config
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\bin\geotagconverter.dll
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\bin\geotagconverter.pdb
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\obj\Debug\geotagconverter.csprojResolveAssemblyReference.cache
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\obj\Debug\geotagconverter.dll
+c:\users\christian\documents\visual studio 2013\Projects\geotagconverter\geotagconverter\obj\Debug\geotagconverter.pdb
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\bin\geotagconverter.dll.config
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\bin\geotagconverter.dll
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\bin\geotagconverter.pdb
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\obj\Debug\geotagconverter.csprojResolveAssemblyReference.cache
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\obj\Debug\geotagconverter.dll
+C:\Users\robin\Dropbox\Bachelor\Betatester\geotagconverter\geotagconverter\obj\Debug\geotagconverter.pdb

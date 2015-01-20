@@ -1,0 +1,12 @@
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\bin\VisVeg_01.dll.config
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\bin\VisVeg_01.dll
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\bin\VisVeg_01.pdb
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.csprojResolveAssemblyReference.cache
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.dll
+c:\users\christian\documents\visual studio 2013\Projects\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.pdb
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\bin\VisVeg_01.dll.config
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\bin\VisVeg_01.dll
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\bin\VisVeg_01.pdb
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.csprojResolveAssemblyReference.cache
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.dll
+C:\Users\Ingvild\Documents\Betatester\VisVeg_01\VisVeg_01\obj\Debug\VisVeg_01.pdb
