@@ -1,0 +1,5 @@
+C:\Users\Christian\documents\visual studio 2013\Projects\VisVeg_02\travelroute\obj\Debug\travelroute.csprojResolveAssemblyReference.cache
+C:\Users\Christian\documents\visual studio 2013\Projects\VisVeg_02\travelroute\bin\Debug\travelroute.dll
+C:\Users\Christian\documents\visual studio 2013\Projects\VisVeg_02\travelroute\bin\Debug\travelroute.pdb
+C:\Users\Christian\documents\visual studio 2013\Projects\VisVeg_02\travelroute\obj\Debug\travelroute.dll
+C:\Users\Christian\documents\visual studio 2013\Projects\VisVeg_02\travelroute\obj\Debug\travelroute.pdb

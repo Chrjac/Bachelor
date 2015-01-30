@@ -1,0 +1,43 @@
+﻿ html, body{
+       height: 100%;
+       margin: 0px;
+       padding: 0px;
+}
+
+#map-canvas{
+    width: 50%;
+    height: 95%;
+    float: right;
+	
+}
+legend {
+	
+	
+    
+}
+fieldset{
+    margin-top: -5%;
+    height: 60%;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#table{ 
+     position: absolute;
+     top: 15%;
+     left: 50%;
+     margin-left: -20%;
+     z-index: 5;
+     background-color: #fff;
+     padding: 5px;
+     
+ 
+
+}
+#km{
+    height: 10%;
+    width: 20%;
+    float: left;
+    margin-top: 25%;
+    margin-left: 7.5%;
+}
