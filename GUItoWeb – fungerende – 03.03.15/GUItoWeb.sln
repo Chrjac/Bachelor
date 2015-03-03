@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUItoWeb", "GUItoWeb\GUItoWeb.csproj", "{851298D0-2840-46D7-A8BA-FC3F82E0104C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ruteplantjenesten", "Ruteplantjenesten\Ruteplantjenesten.csproj", "{AF139062-EA5A-46A2-8899-D6B82444570D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelroute", "travelroute\travelroute.csproj", "{4944BB9A-230B-43C4-8E25-2D68B8A978F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851298D0-2840-46D7-A8BA-FC3F82E0104C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851298D0-2840-46D7-A8BA-FC3F82E0104C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851298D0-2840-46D7-A8BA-FC3F82E0104C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851298D0-2840-46D7-A8BA-FC3F82E0104C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF139062-EA5A-46A2-8899-D6B82444570D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF139062-EA5A-46A2-8899-D6B82444570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF139062-EA5A-46A2-8899-D6B82444570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF139062-EA5A-46A2-8899-D6B82444570D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4944BB9A-230B-43C4-8E25-2D68B8A978F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4944BB9A-230B-43C4-8E25-2D68B8A978F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4944BB9A-230B-43C4-8E25-2D68B8A978F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4944BB9A-230B-43C4-8E25-2D68B8A978F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

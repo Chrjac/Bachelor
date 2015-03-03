@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ruteplantjenesten</title>
+    <script src="jquery-1.11.2.js"></script>
+    <script src="jquery-2.1.3.js"></script>
+    
+    <script src="JsScript.js"></script>
+    <script src="Style.css"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+    
+    <style>
+        ol.viaPlacesClass {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0 0 1px 0;
+        }
+    </style>
+
+    <form action="car">
+        <input type="radio" id="r1" name="car" value="motorbike"><img src="mc.png" alt="MC" style="width:15px;height:15px">
+        <input type="radio" checked="checked" id="r2" name="car" value="smallCar"><img src="car.png" alt="Car" style="width:25px;height:12px">
+        <input type="radio" id="r3" name="car" value="bigCar"><img src="truck.png" alt="Truck" style="width:25px;height:12px">
+    </form>
+
+    <input type="text" id="start" placeholder="Angi startsted">
+
+    <button type="button" onclick="addListElement()">Legg til viapunkt</button>
+
+    <ol class=" viaPlacesClass" id="viaPlaces"></ol>
+
+
+    <input type="text" id="stopp" placeholder="Angi stopsted">
+    <br />
+    
+    <button type="button" onclick="openWebservice()">Beregn</button>  
+    <button type="button" onclick="getGoogleCoordinates()">Google</button>  
+
+    <div id="out"></div>
+    <div id="out1"></div>
+
+    <div id="out2"></div>
+    <div id="jsonstruct"></div>
+    
+
+
+
+    
+    <script>
+       
+        var inpen = document.getElementById('start');
+        var inpto = document.getElementById('stopp');
+        var options = {
+
+            types: ['address'],
+
+            componentRestrictions: { country: 'nor' }
+
+        };
+
+        autocomplete = new google.maps.places.Autocomplete(inpen, options);
+        autocomplete = new google.maps.places.Autocomplete(inpto, options);
+      
+    
+        
+
+    </script>
+</body>
+</html>
