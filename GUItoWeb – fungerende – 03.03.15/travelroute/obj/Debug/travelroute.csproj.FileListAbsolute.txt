@@ -12,3 +12,9 @@ C:\Users\Ingvild\Documents\GUItoWeb – fungerende\travelroute\bin\Debug\travelr
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\travelroute\bin\Debug\travelroute.pdb
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\travelroute\obj\Debug\travelroute.dll
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\travelroute\obj\Debug\travelroute.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\bin\Debug\travelroute.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\bin\Debug\travelroute.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\obj\Debug\travelroute.csprojResolveAssemblyReference.cache
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\obj\Debug\travelroute.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\obj\Debug\travelroute.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\travelroute\bin\Debug\Newtonsoft.Json.dll

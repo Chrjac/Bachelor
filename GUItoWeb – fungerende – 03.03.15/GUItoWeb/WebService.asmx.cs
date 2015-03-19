@@ -29,13 +29,16 @@ namespace GUItoWeb
         {
             var viaList = new List<List<String>>();
 
-            for (int i = 0; i < Via.Count(); i++)
+            if (Via != null)
             {
-                var list = new List<String>();
-                list.Add(Via[i][0]);
-                list.Add(Via[i][1]);
-                list.Add(Via[i][2]);
-                viaList.Add(list);
+                for (int i = 0; i < Via.Count(); i++)
+                {
+                    var list = new List<String>();
+                    list.Add(Via[i][0]);
+                    list.Add(Via[i][1]);
+                    list.Add(Via[i][2]);
+                    viaList.Add(list);
+                }
             }
 
             travelroute.Route selectedRoute = new travelroute.Route
@@ -47,6 +50,8 @@ namespace GUItoWeb
 
 
             };
+
+
 
             travelroute.ITravelRoute R = new Ruteplantjenesten.TravelRoute();
             var result = R.Calculate(selectedRoute);

@@ -17,6 +17,7 @@ namespace travelroute
         public int TotalCostLarge { get; set; }
         public int NumbersOfBarriers { get; set; }
         public List<List<String>> Barriers { get; set; }
+        public List<List<String>> Directions { get; set; }
 
 
     }

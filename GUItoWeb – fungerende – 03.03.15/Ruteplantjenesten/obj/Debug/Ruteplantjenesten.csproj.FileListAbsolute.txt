@@ -14,3 +14,12 @@ C:\Users\Ingvild\Documents\GUItoWeb – fungerende\Ruteplantjenesten\bin\Debug\N
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.csprojResolveAssemblyReference.cache
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.dll
 C:\Users\Ingvild\Documents\GUItoWeb – fungerende\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\Ruteplantjenesten.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\Ruteplantjenesten.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\travelroute.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\travelroute.pdb
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.csprojResolveAssemblyReference.cache
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.dll
+C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\Ruteplantjenesten\obj\Debug\Ruteplantjenesten.pdb
