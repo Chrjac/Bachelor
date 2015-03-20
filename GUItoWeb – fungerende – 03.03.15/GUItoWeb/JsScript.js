@@ -1,5 +1,6 @@
 ﻿function openWebservice()
 {
+    alert(out1);
     var vialist = getVia();
 
     //alle stedsnavn skal hentes fra inputfelt  
@@ -47,18 +48,19 @@
                         if (msg.d.Vehicle == 1) {
                             bom = "Gratis bompassering";
                             total = 0;
-                            document.getElementById("out1").innerHTML = bom;
+                            document.getElementById("out_Km").innerHTML = bom;
                             document.getElementById("out2").innerHTML = "<br>";
                         }
                         if (msg.d.Vehicle == 2) {
                             bom = bom + "<br>" + msg.d.Barriers[i][0] + ", pris: " + msg.d.Barriers[i][1];
-                            document.getElementById("out1").innerHTML = "<br>Avstand: " + msg.d.Distance + "m<br>Totalpris: " + msg.d.TotalCostSmall;
+                            document.getElementById("out_Km").innerHTML = msg.d.Distance;
+                            document.getElementById("out_Takst").innerHTML = msg.d.TotalCostSmall;
                             document.getElementById("out2").innerHTML = "<br><b>Bomstasjoner på ruta</b>" + bom;
                         }
                         else if (msg.d.Vehicle == 3) {
                             bom = bom + "<br>" + msg.d.Barriers[i][0] + ", pris: " + msg.d.Barriers[i][2];
-                            document.getElementById("out1").innerHTML = "<br>Avstand: " + msg.d.Distance + "m<br>Totalpris: " + msg.d.TotalCostLarge;
-                            document.getElementById("out2").innerHTML = "<br>Bomstasjoner på ruta" + bom;
+                            document.getElementById("out_Km").innerHTML = "<br>Avstand: " + msg.d.Distance + "m<br>Totalpris: " + msg.d.TotalCostLarge;
+                            document.getElementById("out2").innerHTML = "<br>Bomstasjoner på ruta <br>" + bom;
                         }
                     }
                     var dir = "";
@@ -71,6 +73,7 @@
             }
         });
     });
+    alert(out2);
 }
 
 
@@ -110,3 +113,113 @@ function addListElement() {
 
 
 }
+(function ($) {
+
+    $.fn.menumaker = function (options) {
+
+        var cssmenu = $(this), settings = $.extend({
+            title: "Menu",
+            format: "dropdown",
+            sticky: false
+        }, options);
+
+        return this.each(function () {
+            cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+            $(this).find("#menu-button").on('click', function () {
+                $(this).toggleClass('menu-opened');
+                var mainmenu = $(this).next('ul');
+                if (mainmenu.hasClass('open')) {
+                    mainmenu.hide().removeClass('open');
+                }
+                else {
+                    mainmenu.show().addClass('open');
+                    if (settings.format === "dropdown") {
+                        mainmenu.find('ul').show();
+                    }
+                }
+            });
+
+            cssmenu.find('li ul').parent().addClass('has-sub');
+
+            multiTg = function () {
+                cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+                cssmenu.find('.submenu-button').on('click', function () {
+                    $(this).toggleClass('submenu-opened');
+                    if ($(this).siblings('ul').hasClass('open')) {
+                        $(this).siblings('ul').removeClass('open').hide();
+                    }
+                    else {
+                        $(this).siblings('ul').addClass('open').show();
+                    }
+                });
+            };
+
+            if (settings.format === 'multitoggle') multiTg();
+            else cssmenu.addClass('dropdown');
+
+            if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+            resizeFix = function () {
+                if ($(window).width() > 768) {
+                    cssmenu.find('ul').show();
+                }
+
+                if ($(window).width() <= 768) {
+                    cssmenu.find('ul').hide().removeClass('open');
+                }
+            };
+            resizeFix();
+            return $(window).on('resize', resizeFix);
+
+        });
+    };
+})(jQuery);
+
+(function ($) {
+    $(document).ready(function () {
+
+        $(document).ready(function () {
+            $("#cssmenu").menumaker({
+                title: "Menu",
+                format: "multitoggle"
+            });
+
+            $("#cssmenu").prepend("<div id='menu-line'></div>");
+
+            var foundActive = false, activeElement, linePosition = 0, menuLine = $("#cssmenu #menu-line"), lineWidth, defaultPosition, defaultWidth;
+
+            $("#cssmenu > ul > li").each(function () {
+                if ($(this).hasClass('active')) {
+                    activeElement = $(this);
+                    foundActive = true;
+                }
+            });
+
+            if (foundActive === false) {
+                activeElement = $("#cssmenu > ul > li").first();
+            }
+
+            defaultWidth = lineWidth = activeElement.width();
+
+            defaultPosition = linePosition = activeElement.position().left;
+
+            menuLine.css("width", lineWidth);
+            menuLine.css("left", linePosition);
+
+            $("#cssmenu > ul > li").hover(function () {
+                activeElement = $(this);
+                lineWidth = activeElement.width();
+                linePosition = activeElement.position().left;
+                menuLine.css("width", lineWidth);
+                menuLine.css("left", linePosition);
+            },
+            function () {
+                menuLine.css("left", defaultPosition);
+                menuLine.css("width", defaultWidth);
+            });
+
+        });
+
+
+    });
+})(jQuery);

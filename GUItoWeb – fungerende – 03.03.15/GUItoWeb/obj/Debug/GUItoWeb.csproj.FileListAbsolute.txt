@@ -74,3 +74,15 @@ C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\
 C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.csprojResolveAssemblyReference.cache
 C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.dll
 C:\Users\Ingvild\Documents\GitHub\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.pdb
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\GUItoWeb.dll.config
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\GUItoWeb.dll
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\GUItoWeb.pdb
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\Newtonsoft.Json.dll
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\Ruteplantjenesten.dll
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\travelroute.dll
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\Ruteplantjenesten.pdb
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\travelroute.pdb
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\bin\Newtonsoft.Json.xml
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.dll
+C:\Users\Christian\Documents\GitHub\Bachelor\Bachelor\GUItoWeb – fungerende – 03.03.15\GUItoWeb\obj\Debug\GUItoWeb.pdb
