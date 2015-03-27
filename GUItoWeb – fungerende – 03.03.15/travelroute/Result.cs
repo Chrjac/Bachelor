@@ -13,6 +13,7 @@ namespace travelroute
         public int NumbersOfBarriers;
         public List<List<String>> Directions;
         public List<List<String>> Barriers;
+        public String Time { get; set; }
 
     }
 }

@@ -14,6 +14,7 @@ namespace travelroute
         public int Vehicle { get; set; }
         public int Distance { get; set; }
         public int TotalCostSmall { get; set; }
+        public String Time { get; set; }
         public int TotalCostLarge { get; set; }
         public int NumbersOfBarriers { get; set; }
         public List<List<String>> Barriers { get; set; }

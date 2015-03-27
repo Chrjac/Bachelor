@@ -29,6 +29,7 @@ namespace Ruteplantjenesten
                     Via = null,
                     Vehicle = 0,
                     Distance = 0,
+                    Time = null,
                     Barriers = null,
                     TotalCostSmall = 0,
                     TotalCostLarge = 0
@@ -45,6 +46,7 @@ namespace Ruteplantjenesten
                     Via = null,
                     Vehicle = 0,
                     Distance = 0,
+                    Time = null,
                     Barriers = null,
                     TotalCostSmall = 0,
                     TotalCostLarge = 0
@@ -117,6 +119,7 @@ namespace Ruteplantjenesten
             var numbersOfBarriers = int.Parse(o["directions"][0]["summary"]["statistics"][3]["value"].ToString());
             int totalCostSmall = int.Parse(o["directions"][0]["summary"]["statistics"][0]["value"].ToString());
             int totalCostLarge = int.Parse(o["directions"][0]["summary"]["statistics"][1]["value"].ToString());
+            var time = o["directions"][0]["summary"]["totalDriveTime"].ToString();
             var barrierList = new List<List<String>>();
 
 
@@ -168,6 +171,7 @@ namespace Ruteplantjenesten
                 Barriers = new List<List<String>>(barrierList),
                 NumbersOfBarriers = numbersOfBarriers,
                 PriceSmall = totalCostSmall,
+                Time = time,
                 PriceTruck = totalCostLarge,
                 Directions = directionList
 
@@ -194,6 +198,7 @@ namespace Ruteplantjenesten
                 Distance = result.Distance,
                 NumbersOfBarriers = result.NumbersOfBarriers,
                 Barriers = result.Barriers,
+                Time = result.Time,
                 Directions = result.Directions,
                 TotalCostSmall = result.PriceSmall,
                 TotalCostLarge = result.PriceTruck

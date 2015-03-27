@@ -1,6 +1,5 @@
 ﻿function openWebservice()
 {
-    alert(out1);
     var vialist = getVia();
 
     //alle stedsnavn skal hentes fra inputfelt  
@@ -9,22 +8,24 @@
     //var via = null;
     var via = [["Sarp", "230607.51618372844", "6632656.554929794"], ["Moss", "88997.77630670881", "6467082.204379129"]];//[{ "name": "Halden", "lat": "123", "lng": "345" },{ "name": "Halden", "lat": "123", "lng": "345" }];
     var vehicleSelected;
-
-    if (document.getElementById('r1').checked) {
+    var vs = document.getElementById('vehicleSelector').innerHTML;
+    if (vs == "Mc" ) {
 
         vehicleSelected = 1;
     }
-    else if (document.getElementById('r2').checked) {
+    else if (vs == "Bil") {
 
         vehicleSelected = 2;
     }
-    else if (document.getElementById('r3').checked) {
+    else if (vs == "Lastebil") {
 
         vehicleSelected = 3;
     }
-
+    else {
+        document.getElementById('ErrorMessage').innerHTML = "Venligst velg kjøretøy!";
+    }
+    
     var jsonText = JSON.stringify({ Start: start, Stopp: stopp, Via: via, Vehicle: vehicleSelected });
-
     $(document).ready(function () {
         $.ajax({
             type: "POST",
@@ -42,25 +43,41 @@
 
                     document.getElementById("out").innerHTML = msg.d.Start +"<br>"+msg.d.Stopp;
 
+                    document.getElementById('ErrorMessage').innerHTML = "";
                     var bom = "";
                     for (var i = 0; i < msg.d.Barriers.length; i++) {
 
                         if (msg.d.Vehicle == 1) {
                             bom = "Gratis bompassering";
                             total = 0;
-                            document.getElementById("out_Km").innerHTML = bom;
+                            b = bom / 1000;
+                            document.getElementById("out_Km").innerHTML = b;
                             document.getElementById("out2").innerHTML = "<br>";
+                            var a = parseInt(msg.d.Time)
+                            a / 1000;
+                            document.getElementById("out_Time").innerHTML = a;
+                            
                         }
                         if (msg.d.Vehicle == 2) {
                             bom = bom + "<br>" + msg.d.Barriers[i][0] + ", pris: " + msg.d.Barriers[i][1];
                             document.getElementById("out_Km").innerHTML = msg.d.Distance;
                             document.getElementById("out_Takst").innerHTML = msg.d.TotalCostSmall;
+                            var a = parseInt(msg.d.Time)
+                            a * 0.0166667;
+                            
+                            document.getElementById("out_Time").innerHTML = a;
+                            
                             document.getElementById("out2").innerHTML = "<br><b>Bomstasjoner på ruta</b>" + bom;
+                            
                         }
                         else if (msg.d.Vehicle == 3) {
                             bom = bom + "<br>" + msg.d.Barriers[i][0] + ", pris: " + msg.d.Barriers[i][2];
-                            document.getElementById("out_Km").innerHTML = "<br>Avstand: " + msg.d.Distance + "m<br>Totalpris: " + msg.d.TotalCostLarge;
+                            document.getElementById("out_Km").innerHTML = msg.d.Distance;
+                            document.getElementById("out_Takst").innerHTML = msg.d.TotalCostLarge;
+                            
+                            document.getElementById("out_Time").innerHTML = msg.d.Time / 1000;
                             document.getElementById("out2").innerHTML = "<br>Bomstasjoner på ruta <br>" + bom;
+                            
                         }
                     }
                     var dir = "";
@@ -223,3 +240,60 @@ function addListElement() {
 
     });
 })(jQuery);
+
+function Mc() {
+    document.getElementById('vehicleSelector').innerHTML = "Mc";
+}
+function Car() {
+    document.getElementById('vehicleSelector').innerHTML = "Bil";
+}
+function Truck() {
+    document.getElementById('vehicleSelector').innerHTML = "Lastebil";
+}
+i = 0;
+function ListAddElement() {
+    
+    i++;
+  /*  var item = document.createElement("li");
+    item.innerHTML = "Item" + i;
+    */
+    if (i <= 4) {
+        var item2 = '<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>';
+
+        $("#sortable").append(item2);
+    }
+    else {
+        document.getElementById('ErrorMessage').innerHTML = "Maks antall viapunkter lagt til";
+    }
+
+}
+function ListAddRoute() {
+    if (document.getElementById("start").value == "" || document.getElementById("stopp").value == "") {
+        document.getElementById('ErrorMessage').innerHTML = "Venligst angi start/stopp";
+    }
+    else {
+        document.getElementById("via").style.visibility = "visible";
+        document.getElementById("Calculate").style.visibility = "visible";
+        
+        var itemStart = '<li style="color:green" class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>' + "Start : " + document.getElementById("start").value + '</li>';
+        var itemStop = '<li style="color:red" class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>' + "Stopp : " + document.getElementById("stopp").value + '</li>';
+        $("#sortable").append(itemStart, itemStop);
+        document.getElementById('ErrorMessage').innerHTML = "";
+        
+    }
+
+
+}
+function toggle() {
+
+    if (document.getElementById("start").value == "" || document.getElementById("stopp").value == "") {
+        document.getElementById('ErrorMessage').innerHTML = "Venligst angi start/stopp";
+    }
+    else {
+        document.getElementById("via").style.visibility = "visible";
+    }
+    
+    
+    
+
+}

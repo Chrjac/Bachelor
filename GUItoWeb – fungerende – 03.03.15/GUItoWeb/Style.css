@@ -2,7 +2,7 @@
 
 #Content{
 	width: 70%;
-	min-height: 600px;
+	height: 600px;
 	border:solid 3px #2366eb;
 	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
@@ -27,7 +27,7 @@ input[type="text"] {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font: normal 16px/normal "Times New Roman", Times, serif;
-  color: rgba(255,255,255,0.9);
+  color: white;
   -o-text-overflow: clip;
   text-overflow: clip;
   background: #0199d9;
@@ -45,15 +45,16 @@ input[type="text"] {
 }
 #RuteBeskrivelse{
 	width: 300px;
-	height: 150px;
+	height: 240px;
 	border:solid 1px #2366eb;
 	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
 	border-radius: 15px;
+    overflow: auto
 }
 #RuteInfo{
 	margin-left: 5%;
-	margin-top: 28%;
+	margin-top: 1%;
 	position: absolute;
 }
 p  {
@@ -65,8 +66,8 @@ i {
     line-height: 210%;
 }
 #Calculate{
-	margin-left: 43%;
-	margin-top: 78%;
+	margin-left: 50%;
+	margin-top: 70%;
 }
 #SideSplit{
 	height: 500px;
@@ -84,7 +85,7 @@ i {
 	height: 100%;
 	float: right;
 	position: relative;
-	margin-top: -63.7%;
+	margin-top: -66%;
 }
 .ButtonPluss {
   display: inline-block;
@@ -554,4 +555,38 @@ div.tabcontents2
     height: 570px;
     margin-top: -590px;
     margin-left: 640px;
+}
+#ErrorMessages{
+    position: relative;
+    width: 210px;
+    height: 20px;
+    margin-top: -117%;
+    margin-left: 42%;
+}
+ #sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 110%;
+    margin-left: -40px;
+
+}
+
+#sortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: .8em;
+    height: 16px;
+}
+
+#sortable li span {
+    position: absolute;
+    margin-left: -1.3em;
+}
+.hidden {
+    display: none;
+}
+.visible {
+        display: block;
 }

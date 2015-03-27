@@ -85,9 +85,21 @@
     <!DOCTYPE html>
     <html>
     <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <meta charset="UTF-8">
         <title>Reisekalkulator</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+           
+        </style>
+        <script>
+            $(function () {
+                $("#sortable").sortable();
+                $("#sortable").disableSelection();
+            });
+        </script>
     </head>
     <body>
 
@@ -101,12 +113,13 @@
                     <div id='cssmenu'>
                         <ul>
                             <li class='active has-sub'>
-                                <a href='#'>Velg Kjøretøy</a>
+                                <a href='#'><span id="vehicleSelector">Velg kjøretøy</span></a>
+                                
                                 <ul>
                                     <li class='has-sub'>
-                                        <a href='#'>MC</a>
-                                        <a href='#'>Bil</a>
-                                        <a href='#'>Lastebil</a>                                      
+                                        <a href='#' onclick="Mc()">MC</a>
+                                        <a href='#' onclick="Car()">Bil</a>
+                                        <a href='#' onclick="Truck()">Lastebil</a>                                      
                                     </li>                                   
                                 </ul>
                             </li>                     
@@ -114,13 +127,13 @@
                     </div>
                     <input type="text" class="startandstop" id="start" placeholder="Angi Startsted">
                     <input type="text" class="startandstop" id="stopp" placeholder="Angi Stop">
-                    <div id="via">
+                    <div style="visibility:collapse" id="via">
                         <input type="text" class="startandstop" id="via" placeholder="Angi via">
-                        <button class="ButtonPluss">+</button>
+                        <button class="ButtonPluss" onclick="ListAddElement()">+</button>
                         <br>
                     </div>
                     <br>
-                    <input type="button" class="ButtonCss" value="Legg til" />
+                    <input type="button" class="ButtonCss" onclick="ListAddRoute()" value="Legg til" />
 
 
 
@@ -128,14 +141,20 @@
                 <div id="RuteInfo">
                     <p>Angitt Kjørerute:</p>
                     <div id="RuteBeskrivelse">
-                        <div id="out"></div>
+                        <ol id="olList">
+                            <ul id="sortable"></ul>
+                        </ol>
+                        <div style="visibility:hidden" id="out">
+
+                        </div>
                     </div>
                 </div>
-                <div id="Calculate">
-                    <button type="button" onclick="openWebservice()">Beregn</button>  
+                <div style="visibility:collapse" id="Calculate">
+                    <button type="button" class="ButtonCss" onclick="openWebservice()">Beregn</button>  
                 </div>
-
-
+                <div id="ErrorMessages">
+                    <span style="color:red" id="ErrorMessage"> </span>
+                </div>
             </div>
             <div id="ContentRight">
                
@@ -165,6 +184,7 @@
                         <div id="view3">
                             <div id="out3"></div>
                             <div id="jsonstruct"></div>
+                            
                         </div>
                         <div id="view4">
                             <div id="out1"></div>
@@ -194,6 +214,7 @@
             //google autocomplete
             var inpen = document.getElementById('start');
             var inpto = document.getElementById('stopp');
+            var inpvia = document.getElementById('via');
             var options = {
 
                 types: ['address'],
@@ -204,6 +225,7 @@
 
             autocomplete = new google.maps.places.Autocomplete(inpen, options);
             autocomplete = new google.maps.places.Autocomplete(inpto, options);
+            autocomplete = new google.maps.places.Autocomplete(inpvia, options);
         </script>
         <script>
     var directionsDisplay;
@@ -227,12 +249,7 @@
         </script>
         <div class="verticalLine"></div>
             
-        <form action="car">
-            <input type="radio" id="r1" name="car" value="motorbike"><img src="mc.png" alt="MC" style="width:15px;height:15px">
-            <input type="radio" checked="checked" id="r2" name="car" value="smallCar"><img src="car.png" alt="Car" style="width:25px;height:12px">
-            <input type="radio" id="r3" name="car" value="bigCar"><img src="truck.png" alt="Truck" style="width:25px;height:12px">
-        </form>
-
+      
     </body>
 </html>
 
