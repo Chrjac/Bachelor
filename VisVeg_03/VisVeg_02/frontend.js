@@ -146,8 +146,8 @@ function add(startCoordinates, stopCoordinates) {
     var latitudeStop = parseFloat(text1[0]);
     var longitudeStop = parseFloat(text1[1]);
 
-    var startConverted = latlongToUTM1(longitudeStart, latitudeStart);
-    var stoppConverted = latlongToUTM1(longitudeStop, latitudeStop);
+    var startConverted = latlongToUTM(longitudeStart, latitudeStart);
+    var stoppConverted = latlongToUTM(longitudeStop, latitudeStop);
 
     sendtoAjax(startConverted, stoppConverted);
 }

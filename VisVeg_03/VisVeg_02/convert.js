@@ -162,24 +162,39 @@ function putnewArray() {
 }
 
 
-function latlongToUTM1(y,x) {
+function latlongToUTM(lnginp, latinp) {
+    var latz;
+    var Item = 0;
+    var k0 = 0.9996;
+    var M0 = 0;
+    var DatumEqRad = [6378137.0, 6378137.0, 6378137.0, 6378135.0, 6378160.0, 6378245.0, 6378206.4, 6378388.0, 6378388.0, 6378249.1, 6378206.4, 6377563.4, 6377397.2, 6377276.3];
+    var DatumFlat = [298.2572236, 298.2572236, 298.2572215, 298.2597208, 298.2497323, 298.2997381, 294.9786982, 296.9993621, 296.9993621, 293.4660167, 294.9786982, 299.3247788,
+    299.1527052, 300.8021499];
 
-    declarations();
+    
+    //skala sentralmeridian (CM)
+    //ekvatorial radius, meter
+    var a = DatumEqRad[Item];
+    //polar utflatning
+    var f = 1 / DatumFlat[Item];
+    //polar akse
+    var b = a * (1 - f);
+    //eksentrisitet
+    //e = Math.sqrt(1 - b * b / a * a);
+    var e = Math.sqrt(1 - (b / a) * (b / a));
+    //konvertere grader til radianer
+    var drad = Math.PI / 180;
 
-    k0 = 0.9996;
-    b = a * (1 - f);
-    e = Math.sqrt(1 - (b / a) * (b / a));
+    var latd0 = parseFloat(latinp);
+    var lngd0 = parseFloat(lnginp);
 
-    latd0 = parseFloat(x);
-    lngd0 = parseFloat(y);
+    var lngd = lngd0;
+    var latd = latd0;
 
-    lngd = lngd0;
-    latd = latd0;
-
-    phi = latd * drad;
-    lng = lngd * drad;
-    utmz = parseFloat(33);
-    latz = 0;
+    var phi = latd * drad;
+    var lng = lngd * drad;
+    var utmz = parseFloat(33);
+    
 
     if (latd > -80 && latd < 72) {
         latz = Math.floor((latd + 80) / 8) + 2;
@@ -193,20 +208,19 @@ function latlongToUTM1(y,x) {
         latz = 23;
     }
 
-    zcm = 3 + 6 * (utmz - 1) - 180;
-    e0 = e / Math.sqrt(1 - e * e);
-    esq = (1 - (b / a) * (b / a));
-    e0sq = e * e / (1 - e * e);
-    N = a / Math.sqrt(1 - Math.pow(e * Math.sin(phi), 2));
-    T = Math.pow(Math.tan(phi), 2);
-    C = e0sq * Math.pow(Math.cos(phi), 2);
-    A = (lngd - zcm) * drad * Math.cos(phi);
-    M = phi * (1 - esq * (1 / 4 + esq * (3 / 64 + 5 * esq / 256)));
+    var zcm = 3 + 6 * (utmz - 1) - 180;
+    var e0 = e / Math.sqrt(1 - e * e);
+    var esq = (1 - (b / a) * (b / a));
+    var e0sq = e * e / (1 - e * e);
+    var N = a / Math.sqrt(1 - Math.pow(e * Math.sin(phi), 2));
+    var T = Math.pow(Math.tan(phi), 2);
+    var C = e0sq * Math.pow(Math.cos(phi), 2);
+    var A = (lngd - zcm) * drad * Math.cos(phi);
+    var M = phi * (1 - esq * (1 / 4 + esq * (3 / 64 + 5 * esq / 256)));
     M = M - Math.sin(2 * phi) * (esq * (3 / 8 + esq * (3 / 32 + 45 * esq / 1024)));
     M = M + Math.sin(4 * phi) * (esq * esq * (15 / 256 + esq * 45 / 1024));
     M = M - Math.sin(6 * phi) * (esq * esq * esq * (35 / 3072));
     M = M * a;
-    M0 = 0;
 
     x = k0 * N * A * (1 + A * A * ((1 - T + C) / 6 + A * A * (5 - 18 * T + T * T + 72 * C - 58 * e0sq) / 120));
     x = x + 500000;
@@ -217,8 +231,8 @@ function latlongToUTM1(y,x) {
         y = 10000000 + y;
     }
 
-    xkoordinat = 10 * (x) / 10;
-    ykoordinat = 10 * y / 10;
+    var xkoordinat = 10 * (x) / 10;
+    var ykoordinat = 10 * y / 10;
 
     var results = [xkoordinat, ykoordinat];
     return results;
